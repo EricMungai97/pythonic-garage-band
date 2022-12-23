@@ -18,10 +18,11 @@ class Band:
            solos.append(member.solo)
        return solos
 
+
 class Musician:
     def __init__(self, name, member, instrument, solo):
         self.name = name
-        self.type = member
+        self.member = member
         self.instrument = instrument
         self.solo = solo
 
@@ -29,7 +30,7 @@ class Musician:
         return f"My name is {self.name} and I play {self.instrument}"
 
     def __repr__(self):
-        return f"{self.type} instance. Name = {self.name}"
+        return f"{self.member} instance. Name = {self.name}"
 
     def get_instrument(self):
         return f"{self.instrument}"
